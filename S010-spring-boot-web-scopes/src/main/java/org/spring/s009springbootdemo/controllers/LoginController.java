@@ -27,9 +27,9 @@ public class LoginController {
         loginProcessor.setPassword(password);
         boolean loggedIn = loginProcessor.login();
         if(!loggedIn) {
-            model.addAttribute("message", "You are logged in");
             return "login.html";
         }
+        model.addAttribute("message", "You are logged in");
         return "redirect:/";
     }
 }
